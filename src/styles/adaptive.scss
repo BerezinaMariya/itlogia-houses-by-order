@@ -1,0 +1,752 @@
+@import 'mixins';
+
+@media screen and (max-width: 1250px) {
+  .technologies {
+    .technologies__container {
+      .technologies__info {
+        margin-top: 0;
+
+        .technologies__lines {
+          display: none;
+        }
+
+        .technologies__items {
+          .technologies__item {
+            top: 0;
+            right: 0;
+            left: 0;
+
+            .technologies__description {
+              display: none;
+              width: 290px;
+              background: var(--grey-board);
+              padding: 15px 22px;
+              box-sizing: border-box;
+              text-align: center;
+              z-index: 2;
+
+              &::before {
+                content: '';
+                border: 12px solid transparent;
+                border-bottom: 12px solid var(--grey-board);
+                position: absolute;
+                left: 137px;
+                top: -23px;
+              }
+            }
+
+            .technologies__pointer:hover, .technologies__pointer:focus {
+              border: 1px solid var(--yellow-hover);
+
+              &::before {
+                border: 1px solid var(--yellow-hover);
+                background-color: var(--yellow-hover);
+              }
+            }
+          }
+
+          .technologies__item.technologies__item_frame, .technologies__item.technologies__item_brace,
+          .technologies__item.technologies__item_components, .technologies__item.technologies__item_windshield,
+          .technologies__item.technologies__item_windows {
+            .technologies__description {
+              top: 51px;
+              left: -137px;
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .carousel {
+    max-width: 800px;
+
+    .slick-slide {
+      padding: 40px 0;
+
+      .slide__info {
+        padding: 10px 0;
+
+        .slide__side.slide__side_right {
+          width: 50%;
+        }
+
+        .slide__side.slide__side_left {
+          padding-right: 0;
+        }
+      }
+    }
+
+    .slick-slide.slick-active {
+      transform: scale(1);
+    }
+
+    .slick-slide.slick-current {
+      transform: scale(1.2);
+    }
+  }
+
+  .guarantee {
+    .guarantee__container {
+      .boards {
+        flex-direction: column;
+        row-gap: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .carousel {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .carousel {
+    max-width: 400px;
+
+    .slick-slide .slide__info {
+      .slide__side {
+
+        .slide__title {
+          font-size: 10px;
+          padding: 0 8px;
+        }
+
+        .slide__text {
+          font-size: 10px;
+          padding: 0 8px;
+          font-weight: 100;
+        }
+      }
+
+      .slide__side.slide__side_right {
+        .slide__text span {
+          display: none;
+        }
+      }
+
+      .slide__side.slide__side_left {
+        padding-left: 25px;
+      }
+    }
+  }
+}
+
+/* 768 - 1199 */
+@media screen and (max-width: 1199px) {
+  .header .header__container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .houses {
+    .houses__container {
+      .houses__items {
+        row-gap: 90px;
+
+        .house.house_odd, .house.house_even {
+          grid-template-areas:
+            "title"
+            "images"
+            "about";
+          width: max-content;
+          margin: 0 auto;
+
+          .house__images {
+            gap: 15px;
+            margin-bottom: 30px;
+          }
+
+          .house__title {
+            margin-bottom: 25px;
+          }
+
+          .house__about {
+            .house__text {
+              margin-bottom: 40px;
+            }
+
+            .house__info {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .steps {
+    .steps__container {
+      .steps__items {
+        justify-content: center;
+        gap: 100px;
+
+        .step {
+          max-width: 290px;
+        }
+
+        .step:nth-child(3n-1) {
+          width: 290px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .guarantee {
+    .guarantee__container {
+      .circles {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+      }
+    }
+  }
+
+
+  .order {
+    .order__container {
+      flex-direction: column;
+      align-items: center;
+
+      .order__img {
+        max-width: 100%;
+      }
+
+      .order__consultation {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .excursion {
+    .excursion__container {
+      background-position: center;
+
+      .excursion__img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    @include input-button-area-small;
+  }
+
+  .item-title {
+    @include font-white-16;
+  }
+
+  .item-text {
+    @include font-white-14;
+  }
+
+  .form {
+    .form__input {
+      @include input-button-area-small;
+    }
+  }
+
+  .popup .popup__container {
+    padding: 50px 15px;
+  }
+
+  .header {
+    .header__container {
+      justify-content: start;
+
+      .contacts {
+        display: none;
+      }
+
+      .header__menu-icon {
+        z-index: 100;
+      }
+
+      .header__logo {
+        width: 100%;
+        margin-left: -40px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .menu {
+      min-width: 0;
+      width: 190px;
+      display: none;
+      top: -15px;
+      left: 0;
+      padding: 35px 15px 80px;
+
+      .contacts {
+        display: flex;
+        align-items: start;
+        margin-top: 50px;
+
+        .phone {
+          @include font-white-16;
+        }
+
+        .call-order-button {
+          font-size: 14px;
+          padding-left: 0;
+          margin-left: -10px;
+          justify-content: start;
+        }
+      }
+    }
+  }
+
+  .about {
+    .about__container {
+      justify-content: center;
+      margin-top: 0;
+      padding-bottom: 280px;
+
+      .about__info {
+        .about__title {
+          font-size: 26px;
+        }
+
+        .about__button {
+          width: 230px;
+        }
+      }
+
+      .about__more, .about__social {
+        display: none;
+      }
+    }
+  }
+
+  .houses {
+    .houses__container {
+      padding-top: 30px;
+      padding-bottom: 45px;
+
+      .houses__items {
+        .house {
+          .house__images {
+            width: 100%;
+
+            .house__image-link.house__image-link_main {
+              width: 100%;
+
+              .house__image.house__image_main {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .house__image-link.house__image-link_small {
+              width: 28%;
+
+              .house__image.house__image_small {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          .house__title {
+            font-size: 18px;
+          }
+
+          .house__about {
+            .house__text {
+              font-size: 14px;
+            }
+
+            .house__button {
+              width: 290px;
+            }
+          }
+        }
+      }
+
+      .houses__more-button {
+        margin: 60px auto 0;
+        font-size: 15px;
+        background-size: 5%;
+        padding-right: 20px;
+        background-position: right;
+      }
+    }
+  }
+
+  .technologies {
+    .technologies__container {
+      padding-top: 45px;
+      padding-bottom: 40px;
+
+      .technologies__info {
+        .technologies__main-img {
+          width: var(--width-img-md);
+        }
+
+        .technologies__items {
+          .technologies__item .technologies__description .technologies__text {
+            font-size: 14px;
+          }
+
+          .technologies__item.technologies__item_frame {
+            top: var(--frame-top-md);
+            left: var(--frame-left-md);
+          }
+
+          .technologies__item.technologies__item_brace {
+            top: var(--brace-top-md);
+            left: var(--brace-left-md);
+          }
+
+          .technologies__item.technologies__item_components {
+            top: var(--components-top-md);
+            left: var(--components-left-md);
+          }
+
+          .technologies__item.technologies__item_windshield {
+            top: var(--windshield-top-md);
+            left: var(--windshield-left-md);
+          }
+
+          .technologies__item.technologies__item_windows {
+            top: var(--windows-top-md);
+            left: var(--windows-left-md);
+          }
+        }
+      }
+    }
+  }
+
+  .steps .steps__container {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .built .built__container {
+    @include padding-top-bottom-45;
+  }
+
+  .guarantee {
+    .guarantee__container {
+      @include flex-column-center;
+      @include padding-top-bottom-45;
+
+      .boards {
+        margin-bottom: 40px;
+
+        .board {
+          display: flex;
+          align-items: start;
+          padding: 20px;
+
+          .board__image {
+            width: 30px;
+            object-fit: cover;
+          }
+
+          .board__description {
+            margin-left: 20px;
+
+            .board__title {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+
+      .circles {
+        margin-bottom: 50px;
+
+        .circle {
+          .circle__image {
+            width: 100px;
+            height: 100px;
+
+            img {
+              transform: scale(0.83);
+            }
+          }
+
+          .circle__description {
+            .circle__title {
+              margin-bottom: 15px;
+            }
+
+            .circle__text {
+              padding: 0 40px;
+            }
+          }
+        }
+      }
+
+      .guarantee__button {
+        width: 290px;
+      }
+    }
+  }
+
+  .order {
+    .order__container {
+      padding-top: 55px;
+      padding-bottom: 0;
+    }
+
+    .order__img {
+      display: none;
+    }
+  }
+
+  .excursion {
+    background-size: cover;
+    background-position: center -65px;
+
+    .excursion__container {
+      min-height: 230px;
+      padding-top: 90px;
+      padding-bottom: 90px;
+
+
+      .excursion__title {
+        font-size: 30px;
+      }
+
+      .excursion__text {
+        font-size: 16px;
+      }
+
+      .excursion__button {
+        width: 290px;
+      }
+    }
+  }
+
+  .footer {
+    .footer__container {
+      padding-top: 47px;
+      padding-bottom: 85px;
+      display: grid;
+      grid-template-areas:
+      "icons"
+      "info"
+      "contacts";
+      justify-content: center;
+
+      .footer__icons .footer__social {
+        margin-top: 50px;
+      }
+
+      .footer__info {
+        text-align: center;
+        margin-top: 50px;
+        gap: 15px;
+
+        .footer__info-item {
+          @include font-white-16;
+        }
+      }
+
+      .footer__contacts {
+        margin-top: 50px;
+      }
+
+      .contacts {
+        align-items: center;
+
+        .call-order-button {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .technologies {
+    .technologies__container {
+      .technologies__info {
+        .technologies__main-img {
+          width: var(--width-img-sm);
+        }
+
+        .technologies__items {
+          .technologies__item.technologies__item_frame, .technologies__item.technologies__item_brace,
+          .technologies__item.technologies__item_components, .technologies__item.technologies__item_windshield,
+          .technologies__item.technologies__item_windows {
+            position: static;
+
+            .technologies__description {
+              left: calc(50% - 145px);
+            }
+          }
+
+          .technologies__item.technologies__item_frame {
+            .technologies__pointer {
+              position: absolute;
+              top: var(--frame-top-sm);
+              left: var(--frame-left-sm);
+            }
+
+            .technologies__description {
+              top: calc(var(--frame-top-sm) + 25px + 16px); // 25px - высота pointer, 16px - отступ по макету
+
+              &::before {
+                left: calc(0% + var(--frame-left-sm));
+              }
+            }
+          }
+
+          .technologies__item.technologies__item_brace {
+            .technologies__pointer {
+              position: absolute;
+              top: var(--brace-top-sm);
+              left: var(--brace-left-sm);
+            }
+
+            .technologies__description {
+              top: calc(var(--brace-top-sm) + 25px + 16px); // 25px - высота pointer, 16px - отступ по макету
+
+              &::before {
+                left: calc(0% + var(--brace-left-sm));
+              }
+            }
+          }
+
+          .technologies__item.technologies__item_components {
+            .technologies__pointer {
+              position: absolute;
+              top: var(--components-top-sm);
+              left: var(--components-left-sm);
+            }
+
+            .technologies__description {
+              top: calc(var(--components-top-sm) + 25px + 16px); // 25px - высота pointer, 16px - отступ по макету
+
+              &::before {
+                left: calc(0% + var(--components-left-sm));
+              }
+            }
+          }
+
+          .technologies__item.technologies__item_windshield {
+            .technologies__pointer {
+              position: absolute;
+              top: var(--windshield-top-sm);
+              left: var(--windshield-left-sm);
+            }
+
+            .technologies__description {
+              top: calc(var(--windshield-top-sm) + 25px + 16px); // 25px - высота pointer, 16px - отступ по макету
+
+              &::before {
+                left: calc(0% + var(--windshield-left-sm));
+              }
+            }
+          }
+
+          .technologies__item.technologies__item_windows {
+            .technologies__pointer {
+              position: absolute;
+              top: var(--windows-top-sm);
+              left: var(--windows-left-sm);
+            }
+
+            .technologies__description {
+              top: calc(var(--windows-top-sm) + 25px + 16px); // 25px - высота pointer, 16px - отступ по макету
+
+              &::before {
+                left: calc(0% + var(--windows-left-sm));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .houses .houses__container {
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    max-width: 290px;
+
+    .slick-slide {
+      padding: 0;
+
+      .slide__info {
+        display: flex;
+
+        .slide__side {
+          .slide__title {
+            font-size: 14px;
+          }
+
+          .slide__text {
+            font-size: 14px;
+          }
+        }
+
+        .slide__side.slide__side_left {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .slick-slide.slick-current {
+      transform: scale(1);
+    }
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .popup {
+    .popup__container {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .general {
+    background-image: url("../images/header-about-background-small.png");
+    background-size: cover;
+  }
+
+  .header {
+    .header__container {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .menu {
+      top: -35px;
+    }
+  }
+
+  .houses .houses__container .houses__items .house .house__about .house__info .house__info-item {
+    width: 90px;
+    height: 90px;
+    font-size: 15px;
+  }
+}

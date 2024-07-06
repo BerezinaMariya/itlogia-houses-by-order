@@ -1,0 +1,111 @@
+//Миксины
+@mixin padding-top-bottom-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@mixin padding-top-bottom-45 {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+@mixin flex-between-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin title {
+  font-family: Neumann, sans-serif;
+  font-weight: 400;
+  color: var(--yellow-main);
+}
+
+@mixin font-white-18 {
+  color: var(--base-white);
+  font-size: 18px;
+}
+
+@mixin font-white-16 {
+  color: var(--base-white);
+  font-size: 16px;
+}
+
+@mixin font-white-14 {
+  color: var(--base-white);
+  font-size: 14px;
+}
+
+@mixin transparent-border {
+  background: transparent;
+  border: 1px solid var(--base-white);
+  color: var(--base-white);
+  box-sizing: border-box;
+}
+
+@mixin input-button-area {
+  display: inline-block;
+  padding: 15px 27px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-family: MuseoSansCyrl, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@mixin input-button-area-small {
+  display: inline-block;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@mixin item-image-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--yellow-main);
+  border-radius: 50%;
+}
+
+@mixin checkbox-ui {
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--base-white);
+  line-height: 1.286;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 0;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 25px;
+    height: 18px;
+    background-image: url("../images/tick.png");
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+}
+

@@ -1,0 +1,76 @@
+body {
+  // коэффициенты для уменьшения img и позиций top, left в блоке technologies
+  --technologies-scale-md: 0.8;
+  --technologies-scale-sm: 0.503;
+
+  // ширина изображения в блоке technologies на разной ширине экрана
+  --width-img-md: 460px; // примерно 576 * 0.8
+  --width-img-sm: 290px; // примерно 576 * 0.5
+
+  // позиции top, left в блоке technologies при больших экранах
+  --frame-top: 100px;
+  --frame-left: 110px;
+
+  --brace-top: 318px;
+  --brace-left: 70px;
+
+  --components-top: 474px;
+  --components-left: 208px;
+
+  --windshield-top: 288px;
+  --windshield-left: 375px;
+
+  --windows-top: 135px;
+  --windows-left: 469px;
+
+  // позиции top, left в блоке technologies при экранах max-width: 767px
+  --frame-top-md: calc(var(--frame-top) * var(--technologies-scale-md));
+  --frame-left-md: calc(var(--frame-left) * var(--technologies-scale-md));
+
+  --brace-top-md: calc(var(--brace-top) * var(--technologies-scale-md));
+  --brace-left-md: calc(var(--brace-left) * var(--technologies-scale-md));
+
+  --components-top-md: calc(var(--components-top) * var(--technologies-scale-md));
+  --components-left-md: calc(var(--components-left) * var(--technologies-scale-md));
+
+  --windshield-top-md: calc(var(--windshield-top) * var(--technologies-scale-md));
+  --windshield-left-md: calc(var(--windshield-left) * var(--technologies-scale-md));
+
+  --windows-top-md: calc(var(--windows-top) * var(--technologies-scale-md));
+  --windows-left-md: calc(var(--windows-left) * var(--technologies-scale-md));
+
+  // позиции top, left в блоке technologies при экранах max-width: 600px
+  --frame-top-sm: calc(var(--frame-top) * var(--technologies-scale-sm));
+  --frame-left-sm: calc(var(--frame-left) * var(--technologies-scale-sm));
+
+  --brace-top-sm: calc(var(--brace-top) * var(--technologies-scale-sm));
+  --brace-left-sm: calc(var(--brace-left) * var(--technologies-scale-sm));
+
+  --components-top-sm: calc(var(--components-top) * var(--technologies-scale-sm));
+  --components-left-sm: calc(var(--components-left) * var(--technologies-scale-sm));
+
+  --windshield-top-sm: calc(var(--windshield-top) * var(--technologies-scale-sm));
+  --windshield-left-sm: calc(var(--windshield-left) * var(--technologies-scale-sm));
+
+  --windows-top-sm: calc(var(--windows-top) * var(--technologies-scale-sm));
+  --windows-left-sm: calc(var(--windows-left) * var(--technologies-scale-sm));
+
+  // colors
+  --base-white: #fff;
+
+  --yellow-main: #ecc66b;
+  --yellow-hover: #fcedcb;
+
+  --grey-main: #25252d;
+  --grey-dark: #363d51;
+  --grey-light: #bababa;
+  --grey-more-button: #89898a;
+  --grey-step-number: #393943;
+  --grey-board: #313139;
+  --grey-footer-board: #2f2f38;
+
+  --popup-background: #0b0b0cc2;
+
+  --red-error: #ff0000;
+}
+
